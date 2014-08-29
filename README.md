@@ -21,6 +21,8 @@ Add this code in a content editor web part on top of the document set.
 
 Displays customized instructions for each step of a process. The instructions at each step can be different.
 
+Add a multi-line text field to your packages list called Guidance. Allow rich text.
+
 Add this after the core code.
 
 ```
@@ -39,6 +41,14 @@ Add this where you would like the guidance to appear:
 ## Comments
 
 Allows users to leave comments on a document set. The comments are stored in a multiline text field in the document set.
+
+Add a Comments field to your packages list.
+
+If you would like to alert different people to comments at each status, add an AutoSendNotificationsTo field on your Statuses list.
+
+To notify different people for each package, add a field(s) to your packages list that would contain those people's names. For instance, you might add an OfficeDirector field to your packages list, and want the person(s) in that field to receive comments for that package.
+
+If you would liek to allow commenters to "CC" others on comments for the package, add a CC field to your packages list.
 
 Add this code after the core code.
 
@@ -89,6 +99,8 @@ Add this where you would like the comments to appear:
 
 Shows buttons that allow users to easily change the status of a document set, with one-click. The administrator can customize the status buttons for each step.
 
+Add a MoveToStatusButtons field to your Statuses list. It should be a lookup field to the Statuses list and allow multiple selections.
+
 Add this after the core code.
 
 ```
@@ -107,6 +119,12 @@ Add this where you would like the status buttons to appear:
 ## Approvals
 
 Allows users to approve document sets with one click, and stores those approvals in fields on the document set. A simple alternative to more complex approval flows in SharePoint.
+
+Add an Approvers list, with three fields: Title, ApprovedByField, and ApprovedOnField.
+
+To your packages list, add By and On fields for each approver. For example, OfficeDirectorApprovedBy and OfficeDirectorApprovedOn. These fields will track each approval for a package.
+
+To your Statuses list, add an Approvers field.
 
 Add this after the core code.
 
