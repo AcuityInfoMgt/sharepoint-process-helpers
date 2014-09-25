@@ -4,6 +4,7 @@
 <script src="../../../SiteAssets/js/comments.js" type="text/javascript"></script>
 <script src="../../../SiteAssets/js/approvals.js" type="text/javascript"></script>
 <script src="../../../SiteAssets/js/status.js" type="text/javascript"></script>
+<link href="../../../SiteAssets/js/sharepoint-process-helpers.css" rel="stylesheet" type="text/css" />
 
 <div class="sharepoint-process-helpers_box" id="sharepoint-process-helpers_guidance">
   <div id="sharepoint-process-helpers_guidance_content"></div>
