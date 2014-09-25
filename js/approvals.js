@@ -118,4 +118,3 @@ function approvalButton(showApproverTitle, inset, approverTitle,
 			showApproverTitle ? ' for ' + approverTitle : '') + '</div>';
 }
 
-  ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.approvals.getApprovals, "sp.js");

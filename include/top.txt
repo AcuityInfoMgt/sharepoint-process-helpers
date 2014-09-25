@@ -1,9 +1,12 @@
+<script>
+sharepointProcessHelpers = {};
+</script>
 <script src="../../../SiteAssets/js/jquery.min.js" type="text/javascript"></script>
-<script src="../../../SiteAssets/js/sph_core.js" type="text/javascript"></script>
 <script src="../../../SiteAssets/js/guidance.js" type="text/javascript"></script>
 <script src="../../../SiteAssets/js/comments.js" type="text/javascript"></script>
 <script src="../../../SiteAssets/js/approvals.js" type="text/javascript"></script>
 <script src="../../../SiteAssets/js/status.js" type="text/javascript"></script>
+<script src="../../../SiteAssets/js/sph_core.js" type="text/javascript"></script>
 <link href="../../../SiteAssets/css/core.css" rel="stylesheet" type="text/css" />
 
 <div class="sharepoint-process-helpers_box" id="sharepoint-process-helpers_guidance">

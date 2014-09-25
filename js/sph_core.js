@@ -13,7 +13,17 @@ sharepointProcessHelpers.core.config = {
 	}
 }
 
+sharepointProcessHelpers.core.checkUserFailed = function() {
+	alert(
+		"Please reload the page, as an error occurred.\n\nIf this happens again, let the SharePoint team know that user information could not be retrieved."
+	);
+};
+
 sharepointProcessHelpers.core.init = function(selector, fn) {
+	sharepointProcessHelpers.approvals.getApprovals();
+	sharepointProcessHelpers.comments.getComments();
+	sharepointProcessHelpers.guidance.getGuidance();
+	sharepointProcessHelpers.guidance.getStatuses();
 	if (sharepointProcessHelpers.core.getMessage()) {
 		$('.s4-ba').before('<div class="sharepoint-process-helpers_top-message">' + sharepointProcessHelpers.core.config.confirmationMessages[sharepointProcessHelpers.core.getMessage()] + '</div>');
 		sharepointProcessHelpers.core.deleteMessage();
@@ -132,5 +142,12 @@ sharepointProcessHelpers.core.forEachElement = function(selector, fn) {
     fn(elements[i], i);
 }
 
+/*
+sharepointProcessHelpers.core.preInit = function() {
+	SP.SOD.executeFunc('sp.js', 'SP.ClientContext', sharepointProcessHelpers.core.init);
+}*/
 
-ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.core.init, "sp.js");
+SP.SOD.executeFunc('sp.js', 'SP.ClientContext', function () { console.log("Initiating SP.ClientContext") });
+SP.SOD.executeOrDelayUntilScriptLoaded(sharepointProcessHelpers.core.init,"sp.js");
+
+/*_spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.core.preInit");*/

@@ -11,11 +11,6 @@ sharepointProcessHelpers.comments = sharepointProcessHelpers.comments || {};
 
 sharepointProcessHelpers.comments.commentRecipients = [];
 	
-sharepointProcessHelpers.core.checkUserFailed = function() {
-	alert(
-		"Please reload the page, as an error occurred.\n\nIf this happens again, let the SharePoint team know that user information could not be retrieved."
-	);
-};
 
 sharepointProcessHelpers.comments.appendCommentRecipients = function (recipients) {
 	if (recipients instanceof Array) {
@@ -128,6 +123,3 @@ $(document).on('click', '#sharepoint-process-helper_add_cc', function() {
 	SP.UI.ModalDialog.showModalDialog(modalOptions);
 });
 
-if (sharepointProcessHelpers.core.queryObj()['ID']) {
-  ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.comments.getComments, "sp.js");
-}
