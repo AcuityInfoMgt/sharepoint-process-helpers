@@ -21,4 +21,7 @@ sharepointProcessHelpers.guidance.getGuidance = function () {
 	);
 }
 
-_spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.guidance.getGuidance");
+
+if (sharepointProcessHelpers.core.queryObj()['ID']) {
+  _spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.guidance.getGuidance");
+}
