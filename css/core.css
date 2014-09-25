@@ -5,6 +5,11 @@
 	display: none;
 }
 
+#sharepoint-process-helper_comment_list, #sharepoint-process-helpers_guidance_content {
+	font-size: 13px;
+}
+
+
 
 /*
 
