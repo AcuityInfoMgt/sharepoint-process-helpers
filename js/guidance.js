@@ -21,4 +21,6 @@ sharepointProcessHelpers.guidance.getGuidance = function () {
 	);
 }
 
-_spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.guidance.getGuidance");
+
+  ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.guidance.getGuidance, "sp.js");
+

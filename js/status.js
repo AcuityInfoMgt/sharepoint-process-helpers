@@ -77,4 +77,4 @@ $(document).on('click', '.sharepoint-process-helpers_status_button', function() 
 		/*}*/
 	});
 
-_spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.guidance.getStatuses");
+  ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.guidance.getStatuses, "sp.js");
