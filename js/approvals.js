@@ -118,4 +118,6 @@ function approvalButton(showApproverTitle, inset, approverTitle,
 			showApproverTitle ? ' for ' + approverTitle : '') + '</div>';
 }
 
-_spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.approvals.getApprovals");
+if (sharepointProcessHelpers.core.queryObj()['ID']) {
+  _spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.approvals.getApprovals");
+}
