@@ -132,4 +132,6 @@ sharepointProcessHelpers.core.forEachElement = function(selector, fn) {
     fn(elements[i], i);
 }
 
-_spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.core.init");
+if (sharepointProcessHelpers.core.queryObj()['ID']) {
+  _spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.core.init");
+}
