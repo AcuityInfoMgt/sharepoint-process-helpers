@@ -23,5 +23,5 @@ sharepointProcessHelpers.guidance.getGuidance = function () {
 
 
 if (sharepointProcessHelpers.core.queryObj()['ID']) {
-  _spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.guidance.getGuidance");
+  ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.guidance.getGuidance, "sp.js"
 }
