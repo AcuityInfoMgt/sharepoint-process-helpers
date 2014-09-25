@@ -128,4 +128,6 @@ $(document).on('click', '#sharepoint-process-helper_add_cc', function() {
 	SP.UI.ModalDialog.showModalDialog(modalOptions);
 });
 
-_spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.comments.getComments");
+if (sharepointProcessHelpers.core.queryObj()['ID']) {
+  _spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.comments.getComments");
+}
