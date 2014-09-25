@@ -43,6 +43,3 @@
     <h2>Move package</h2>
     <div id="sharepoint-process-helpers_status_buttons_content"></div>
 </div>
-
-
-<link href="../../../SiteAssets/sharepoint-process-helpers.css" rel="stylesheet" type="text/css" />
