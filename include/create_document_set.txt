@@ -1,0 +1,2 @@
+<!-- Replace DOC SET CREATE URL with the creation form for your doc set -->
+<a class=""sharepoint-process-helpers_button sharepoint-process-helpers_button_primary" href="DOC SET CREATE URL HERE">Create a Package</a>
