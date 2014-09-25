@@ -1,6 +1,8 @@
 SharePoint Process Helpers
 =======
 
+**This tool is under development and is not yet stable for production use.**
+
 Include these helpers on a document set homepage to add more interactive features to process trackers in SharePoint.
 
 Place the helper files in the Site Assets folder of the site that contains the document set.
