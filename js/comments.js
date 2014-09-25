@@ -129,5 +129,5 @@ $(document).on('click', '#sharepoint-process-helper_add_cc', function() {
 });
 
 if (sharepointProcessHelpers.core.queryObj()['ID']) {
-  _spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.comments.getComments");
+  ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.comments.getComments, "sp.js");
 }
