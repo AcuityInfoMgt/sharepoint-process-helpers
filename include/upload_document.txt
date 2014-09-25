@@ -1,0 +1,77 @@
+<div id="upload">&nbsp;</div>
+
+<script type="text/javascript">  
+
+/* http://stackoverflow.com/questions/19999388/jquery-check-if-user-is-using-ie */
+
+function detectIE() {
+    var ua = window.navigator.userAgent;
+    var msie = ua.indexOf('MSIE ');
+    var trident = ua.indexOf('Trident/');
+
+    if (msie > 0) {
+        // IE 10 or older => return version number
+        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+    }
+
+    if (trident > 0) {
+        // IE 11 (or newer) => return version number
+        var rv = ua.indexOf('rv:');
+        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+    }
+
+    // other browser
+    return false;
+}
+
+/* http://social.technet.microsoft.com/Forums/sharepoint/en-US/693fb0df-cf44-4515-a10a-3168b581326c/create-dynamic-upload-document-button-on-document-set-welcome-page?forum=sharepointgeneralprevious */
+ 
+ //get the querystring from the Document Set url and split into an array
+ function getVariables() {  
+   var variables = {};  
+   var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) { variables[key] = value; });  
+   return variables;  
+ }  
+ //get the items   
+ var listID = getVariables()["List"]  
+ var rootFolder = getVariables()["RootFolder"];  
+ 
+ //this function opens the Modal Dialog Form 
+ function OpenNewFormSet()  
+ {    
+   //get full weburl
+   var context = new SP.ClientContext();
+   var relativeWebUrl = context.get_url();
+   var fullWebUrl = window.location.protocol + '//' + window.location.host + relativeWebUrl ; 
+	
+   //set the Modal Dialog	
+   var options = SP.UI.$create_DialogOptions();
+   /*if (detectIE()) {
+   	var multipleUpload = '&MultipleUpload=1';
+   } else {*/
+    var multipleUpload = '';    
+   /*}*/
+   options.url = fullWebUrl + '/_layouts/Upload.aspx?List=' + listID + '&RootFolder=' + rootFolder + '&IsDlg=1' + multipleUpload;    
+   options.width = 650;    
+   options.height = 450;    
+   options.title = "Upload Document";  
+   options.dialogReturnValueCallback = Function.createDelegate(null, CloseCallback);  
+   SP.UI.ModalDialog.showModalDialog(options);  
+ }  
+
+  //this function refresh the page after the Modal Dialog Form has been closed 
+ function CloseCallback(result, target) { location.reload(true); }  
+ function startScript() { var xyz = ExecuteOrDelayUntilScriptLoaded(OpenNewFormSet, "sp.js");}  
+ 
+//prepare the upload button
+ var contentUpload = '';
+		  /*if (!detectIE()) {
+	 contentUpload += '<p><strong>Note: Use Internet Explorer to edit documents more easily.</strong></p>';
+    }*/
+	/*contentUpload += '<div id="uploadbox">';*/
+	contentUpload += '<button class="sharepoint-process-helpers_button sharepoint-process-helpers_button_primary" onclick="javascript:startScript();return false;" type="submit">&#160;<span>Upload Document</span></nobr></button>';
+	contentUpload += '</div>';
+	
+	 // replace the upload DIV
+     $('#upload').html(contentUpload);
+</script>
