@@ -1,0 +1,13 @@
+<script src="/SiteAssets/jquery.min.js" type="text/javascript"></script>
+<script src="../../../SiteAssets/sharepoint-process-helpers_core.js" type="text/javascript"></script>
+<script src="../../../SiteAssets/sharepoint-process-helpers_guidance.js" type="text/javascript"></script>
+<script src="../../../SiteAssets/sharepoint-process-helpers_comments.js" type="text/javascript"></script>
+<script src="../../../SiteAssets/sharepoint-process-helpers_approvals.js" type="text/javascript"></script>
+<script src="../../../SiteAssets/sharepoint-process-helpers_status.js" type="text/javascript"></script>
+<!-- <script src="../../../SiteAssets/sharepoint-process-helpers_status.js" type="text/javascript"></script>
+ -->
+
+
+<div class="sharepoint-process-helpers_box" id="sharepoint-process-helpers_guidance">
+  <div id="sharepoint-process-helpers_guidance_content"></div>
+</div>
