@@ -11,4 +11,4 @@ sharepointProcessHelpers.redirect.init = function() {
 	}
 }
 
-ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.redirect.init, "sp.js");
+_spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.redirect.init");

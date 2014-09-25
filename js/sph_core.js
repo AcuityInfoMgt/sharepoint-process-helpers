@@ -131,6 +131,4 @@ sharepointProcessHelpers.core.forEachElement = function(selector, fn) {
   for (var i = 0; i < elements.length; i++)
     fn(elements[i], i);
 }
-
-
-ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.core.init, "sp.js");
+_spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.core.init");
