@@ -77,4 +77,6 @@ $(document).on('click', '.sharepoint-process-helpers_status_button', function() 
 		/*}*/
 	});
 
-_spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.guidance.getStatuses");
+if (sharepointProcessHelpers.core.queryObj()['ID']) {
+  _spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.guidance.getStatuses");
+}
