@@ -132,6 +132,5 @@ sharepointProcessHelpers.core.forEachElement = function(selector, fn) {
     fn(elements[i], i);
 }
 
-if (sharepointProcessHelpers.core.queryObj()['ID']) {
-  ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.core.init, "sp.js");
-}
+
+ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.core.init, "sp.js");

@@ -77,6 +77,4 @@ $(document).on('click', '.sharepoint-process-helpers_status_button', function() 
 		/*}*/
 	});
 
-if (sharepointProcessHelpers.core.queryObj()['ID']) {
   ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.guidance.getStatuses, "sp.js");
-}
