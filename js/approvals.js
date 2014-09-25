@@ -119,5 +119,5 @@ function approvalButton(showApproverTitle, inset, approverTitle,
 }
 
 if (sharepointProcessHelpers.core.queryObj()['ID']) {
-  _spBodyOnLoadFunctionNames.push("sharepointProcessHelpers.approvals.getApprovals");
+  ExecuteOrDelayUntilScriptLoaded(sharepointProcessHelpers.approvals.getApprovals, "sp.js");
 }
