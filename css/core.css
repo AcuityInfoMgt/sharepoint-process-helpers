@@ -1,0 +1,176 @@
+#sharepoint-process-helpers_status_buttons {
+	display: none;
+}
+#sharepoint-process-helpers_approvals {
+	display: none;
+}
+
+
+/*
+
+Use to hide fields on the new and edit forms. This is a workaround specific to SP2010.
+
+form[action^='/SITE/_layouts/NewDocSet.aspx'] .ms-formtable tbody > tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr {
+	
+	display: none;
+}
+
+form[action^='/SITE/LIST/Forms/EditForm.aspx'] .ms-formtable tbody > tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr + tr {
+	display: none;
+}
+
+.ms-formtable [title='FIELD NAME 1'], .ms-formtable [title='FIELD NAME 2'] {
+	display: none;
+}
+
+*/
+
+/* 
+Hide auto-filled fields from new and edit forms. Note: to restrict this to the new form only, add [action*='NewDocSet.aspx'] before each selector.
+*/
+
+/*Highlight checklist items that were not acknowledged (uses JS as well)*/
+
+
+/*Checklist code not in use
+
+.highlight {
+	color: red;
+	font-weight: bold;
+}
+.approval-checklist-item {
+	margin-bottom: 10px;
+}
+
+.approval-checklist-item:last-child  {
+	margin-bottom: 0px;
+}
+
+
+.approval-checklists input[type=checkbox] {
+	width: 15px;
+	height: 15px;
+	margin-right: 7px;	
+}
+
+*/
+
+/*Add naming convention instructions (SP doesn't allow a native description for the name field)*/
+
+/*form[action^='/SITE/_layouts/NewDocSet.aspx'] .ms-formtable tbody tr:first-child .ms-formbody:after {
+	content: "Naming convention guidance here";
+	white-space: pre;
+}*/
+
+/*
+.ms-formbody {
+	padding-bottom: 20px;
+}
+
+.ms-formtable span {
+	font-size: 1em !important;
+}
+*/
+
+/*.ms-formtable [src="/_layouts/images/calendar.gif"] {
+	display: none;
+}*/
+
+
+.sharepoint-process-helper_fake_link {
+	color: #0072bc;
+	cursor: pointer;
+}
+
+
+.sharepoint-process-helpers_approvals_box {
+	vertical-align: top;
+	width: 150px;
+	min-height: 180px;
+	background-color: lightgray;
+	padding: 10px;
+	display: inline-block;
+	margin: 0 10px 10px 0;
+	border: 1px solid lightgray;
+}
+
+.sharepoint-process-helpers_top-message {
+	padding: 1em;
+	background-color: #99FFCC;
+	font-size: 1.2em;
+}
+
+
+
+/*Colors for approval boxes*/
+.sharepoint-process-helpers_approvals_approved {
+	background-color: #99FFCC;
+}
+
+.sharepoint-process-helpers_approvals_sent {
+	background-color: #FFFF66;
+}
+
+.sharepoint-process-helpers_button {
+	padding: 10px;
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: middle;
+	margin-right: 20px;
+	font-size: 1.4em;
+	cursor: pointer;
+	
+	border-radius: 3px;
+}
+
+.sharepoint-process-helpers_button_inset {
+	margin: 0 0 5px 0;
+	font-size: 1.2em;
+	background-color: white;
+	color: black;
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+
+.sharepoint-process-helpers_box textarea {
+	width: 100%;
+	max-width: 500px;
+	height: 100px;
+}
+
+#sharepoint-process-helper_comment_form {
+	display: none;
+}
+
+.sharepoint-process-helpers_button_primary  {
+	border: 1px solid #105296;
+	background-color: #06C;
+	color: white !important;
+}
+
+.sharepoint-process-helpers_button_primary:hover {
+	background-color: #1a7de6;
+}
+
+.ms-addnew {
+	display: none;
+}
+
+.sharepoint-process-helpers_box {
+	margin-top: 40px;
+	padding: 10px;
+	border: 1px solid lightgray;
+}
+
+.sharepoint-process-helpers_box:first-child {
+	margin-bottom: 40px;
+}
+
+
+/*
+#move-status-note {
+	font-size: 1.5em;
+	background-color:rgb(255, 255, 0);
+}
+*/
