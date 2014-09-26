@@ -1,5 +1,4 @@
-** These are draft instructions. The product is not ready for production use. **
-
+*These are draft instructions, and they'll be simplified greatly. The product is not ready for production use.*
 
 ## Core
 
