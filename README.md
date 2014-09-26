@@ -20,3 +20,5 @@ We are targeting SharePoint 2010 first, as it makes up the bulk of on-premise in
 
 - Easier setup process
 - SharePoint 2013 compatibility
+
+Watch this repository for updates, and check out the [draft admin instructions](future_readme.md)] that will be polished before this is stable.
