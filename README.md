@@ -3,17 +3,22 @@ SharePoint Process Helpers
 
 **This tool is under development and is not yet stable for production use.**
 
-Include these helpers on a document set homepage to add more interactive features to process trackers in SharePoint.
+Include these helpers on a document set homepage to add more interactive features to process trackers in SharePoint. These were originally used in a large organization, automating a process with over 200 stakeholders.
 
 Initially we are targeting SharePoint 2010, but SharePoint 2013 support is likely in the future.
 
 Place the helper files in the Site Assets folder of the site that contains the document set.
 
+## Product roadmap
+
+- Easier setup process
+- SharePoint 2013 compatibility
+
 ## Core
 
 This is required to use any of the helpers. It doesn’t do anything itself.
 
-Requires jQuery to be declared first.
+Requires jQuery to be declared first. Replace the jQuery src with the location of jQuery on your SharePoint server (you may need to add jQuery to your server).
 
 Add this code in a content editor web part on top of the document set.
 ```
